@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-type books []string
+type common_slice []string
 
-func (b books) print(){
-	for i, book := range b{
-		fmt.Println(i, book)
+func (cs common_slice) print(){
+	for i, val := range cs{
+		fmt.Println(i, val)
 	}
 }
 

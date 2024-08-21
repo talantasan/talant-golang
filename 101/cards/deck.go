@@ -5,11 +5,11 @@ import "fmt"
 // create a new type of deck
 // which is slice of strings
 
-type deck []string
+type common_slice []string
 
-func (d deck) print() {
-	for i, card := range d {
-		fmt.Println(i, card)
+func (cs common_slice) print() {
+	for i, val := range cs {
+		fmt.Println(i, val)
 	}
 }
 

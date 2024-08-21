@@ -26,8 +26,15 @@ func main(){
 	fmt.Println("--------------------")
 
 	// 
-	books := books{"Kelkel", "Broken Sword", "Jamila"}
+	books := common_slice{"Kelkel", "Broken Sword", "Jamila"}
 	books.print()
+
+	fmt.Println("--------------------")
+
+	students := common_slice{"Kapar", "Aibek", "Nurlan", "Junai"}
+	students.print()
+
+	
 }
 
 func newMessage() string{
