@@ -9,7 +9,14 @@ func main(){
 	// call function
 	fmt.Println(newMessage())
 
-	//loop 
+	//loop
+	sum := 0
+	for i := range 10{
+		sum += i
+		fmt.Println(i, sum)
+	}
+
+	//loop-slice 
 	series := []string{"House of Cards", "Lord of Rings", "Dexter"}
 	series = append(series, "Doctor Who")
 	for i, serie := range series{
