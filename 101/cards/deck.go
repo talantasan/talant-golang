@@ -2,14 +2,27 @@ package main
 
 import "fmt"
 
-// create a new type of deck
-// which is slice of strings
+type deck []string
 
-type common_slice []string
+func newDeck() deck{
+	cards := deck{}
+	cardSuits := []string{"Spades", "Hearts", "Diamonds", "Clubs"}
+	cardValues := []string{"Ace", "Two", "Three", "Four"}
 
-func (cs common_slice) print() {
-	for i, val := range cs {
-		fmt.Println(i, val)
+	for _, cardValue := range cardValues{
+		for _, cardSuit := range cardSuits{
+			cards = append(cards, cardValue+" of "+cardSuit)
+		}
+	}
+	return cards
+}
+
+func (d deck) print(){
+	for i, card := range d{
+		fmt.Println(i, card)
 	}
 }
 
+func deal(d deck, handSize int) (deck, deck){
+	return d[:handSize], d[handSize:]
+}

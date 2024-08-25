@@ -1,26 +1,14 @@
 package main
 
-// import "fmt"
-
-func main() {
-	// var cards string = "Ace of Spades"
-	// cards := "Ace of Spades" 		// Short hand declaration
-	// cards = "Five of Diamonds" // Reassigning the value of the variable
-	// cards := newCard()
-	
-	my_slices := deck{"one", "two", newCard()}
-
-	my_slices = append(my_slices, "three") // Append to the slice
+import "fmt"
 
 
-	my_slices.print()
+func main(){
+	cards := newDeck()
 
-	// fmt.Println(my_slices)
+	hand, remainingHand := deal(cards, 7)
 
+	hand.print()
+	fmt.Println("--------------------")
+	remainingHand.print()
 }
-
-func newCard() string {
-	return "Five of Diamonds"
-}
-
-
